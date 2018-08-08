@@ -1,22 +1,19 @@
 # cranium
 
-A library for Dart developers.
+Cranium
 
-Created from templates made available by Stagehand under a BSD-style
-[license](https://github.com/dart-lang/stagehand/blob/master/LICENSE).
+Experimentation of DSL for graphql in dart
 
-## Usage
+
+## Example
 
 A simple usage example:
 
-    import 'package:cranium/cranium.dart';
-
-    main() {
-      var awesome = new Awesome();
-    }
-
-## Features and bugs
-
-Please file feature requests and bugs at the [issue tracker][tracker].
-
-[tracker]: http://example.com/issues/replaceme
+```dart
+final q = query("article", ss: [
+  field("id"),
+  field("slug"),
+  field("description"),
+  field("photo", args: {"size": new IntValue(500)})
+]);
+```
